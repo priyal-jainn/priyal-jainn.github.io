@@ -1,0 +1,96 @@
+/* ================================================================
+   VOLUNTEER.CSS — NGO / Volunteering / Hobbies Section
+   Extensible: add more .vol-card items as needed
+   Portfolio: Priyal Jain
+   ================================================================ */
+
+#volunteer {
+  position: relative;
+  z-index: 1;
+}
+
+/* 2-column responsive grid — stretch makes all cards in a row equal height */
+/* To add a new entry: copy one .vol-card block in index.html     */
+.vol__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+@media (max-width: 700px) {
+  .vol__grid { grid-template-columns: 1fr; }
+}
+
+/* ── Volunteer Card ───────────────────────────────────────────── */
+.vol-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  padding: 1.5rem 1.6rem;
+  border-radius: var(--card-radius-sm);
+  border-left: 3px solid var(--color-rani-soft);
+  height: 100%;
+  box-sizing: border-box;
+  transition: transform var(--transition-fast),
+              box-shadow var(--transition-fast),
+              border-color var(--transition-fast);
+}
+
+.vol-card:hover {
+  transform: translateY(-3px);
+  border-left-color: var(--color-rani-pink);
+  box-shadow: var(--glass-shadow), var(--glow-pink);
+}
+
+.vol-card__emoji {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 0.1rem;
+}
+
+.vol-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.vol-card__title {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  line-height: 1.3;
+}
+
+.vol-card__org {
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  color: var(--color-teal);
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+.vol-card__detail {
+  font-size: 0.88rem;
+  color: var(--color-text-mid);
+  line-height: 1.6;
+  margin-top: 0.15rem;
+}
+
+.vol-card__award {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--pill-radius);
+  background: var(--color-saffron-pale);
+  border: 1px solid var(--color-saffron-soft);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #a05500;
+  width: fit-content;
+}

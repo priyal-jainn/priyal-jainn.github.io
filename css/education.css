@@ -1,0 +1,86 @@
+/* ================================================================
+   EDUCATION.CSS — Education Section (2-column grid)
+   Extensible: copy a .edu-card block to add more degrees
+   Portfolio: Priyal Jain
+   ================================================================ */
+
+#education {
+  position: relative;
+  z-index: 1;
+}
+
+/* 2-column responsive grid — stretch makes all cards in a row equal height */
+.edu__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+@media (max-width: 640px) {
+  .edu__grid { grid-template-columns: 1fr; }
+}
+
+/* ── Education Card ───────────────────────────────────────────── */
+/* To add a new degree: copy one .edu-card block in index.html    */
+.edu-card {
+  padding: 2rem 2.25rem;
+  border-top: 3px solid var(--color-saffron);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  height: 100%;
+  box-sizing: border-box;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.edu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glass-shadow), var(--glow-saffron);
+}
+
+/* Year / period badge */
+.edu-card__year {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--color-saffron);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+}
+
+.edu-card__degree {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-text-dark);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.edu-card__school {
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--color-teal);
+}
+
+.edu-card__location {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.04em;
+}
+
+.edu-card__gpa {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-mid);
+  margin-top: 0.35rem;
+}
+
+.edu-card__detail {
+  font-size: 0.9rem;
+  color: var(--color-text-mid);
+  line-height: 1.65;
+  margin-top: 0.35rem;
+}

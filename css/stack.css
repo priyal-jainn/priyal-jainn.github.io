@@ -1,0 +1,104 @@
+/* ================================================================
+   STACK.CSS — Tech Stack Section
+   Portfolio: Priyal Jain
+   ================================================================ */
+
+#stack {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive 2-column group grid */
+.stack__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .stack__grid { grid-template-columns: 1fr; }
+}
+
+/* ── Group Card ───────────────────────────────────────────────── */
+.stack__group {
+  padding: 1.5rem 1.75rem;
+  border-top: 2px solid var(--color-teal-soft);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.stack__group:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glass-shadow), var(--glow-teal);
+}
+
+.stack__group-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--color-teal);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.9rem;
+}
+
+/* Tag cloud */
+.stack__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Base stack tag */
+.stack-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--pill-radius);
+  background: rgba(255, 255, 255, 0.60);
+  border: 1px solid rgba(0, 123, 127, 0.20);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-text-mid);
+  letter-spacing: 0.02em;
+  transition: background var(--transition-fast),
+              border-color var(--transition-fast),
+              color var(--transition-fast),
+              transform var(--transition-fast);
+  cursor: default;
+}
+
+.stack-tag:hover {
+  background: var(--color-teal-pale);
+  border-color: var(--color-teal);
+  color: var(--color-teal);
+  transform: translateY(-1px);
+}
+
+/* Accent variant — specializations */
+.stack-tag--accent {
+  background: var(--color-teal-pale);
+  border-color: var(--color-teal-soft);
+  color: var(--color-teal);
+  font-weight: 600;
+}
+
+.stack-tag--accent:hover {
+  background: var(--color-teal-soft);
+  border-color: var(--color-teal);
+}
+
+/* Cert variant */
+.stack-tag--cert {
+  background: var(--color-saffron-pale);
+  border-color: var(--color-saffron-soft);
+  color: #b35900;
+  font-size: 0.7rem;
+}
+
+.stack-tag--cert:hover {
+  background: var(--color-saffron-soft);
+  border-color: var(--color-saffron);
+  color: #7a3d00;
+}

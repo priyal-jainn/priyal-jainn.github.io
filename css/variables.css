@@ -1,0 +1,62 @@
+/* ================================================================
+   VARIABLES.CSS — Desi Maximalism Design Tokens
+   Portfolio: Priyal Jain
+   ================================================================ */
+
+:root {
+
+  /* ── CORE PALETTE ─────────────────────────────────────────── */
+  --color-saffron:        #FF9933;
+  --color-saffron-soft:   #FFD4A3;
+  --color-saffron-pale:   #FFF3E0;
+
+  --color-teal:           #007B7F;
+  --color-teal-soft:      #B2E4E6;
+  --color-teal-pale:      #E0F7FA;
+
+  --color-rani-pink:      #E0457B;
+  --color-rani-soft:      #FFB3CE;
+  --color-rani-pale:      #FFE4EF;
+
+  --color-marigold:       #FFC200;
+
+  /* ── BACKGROUND ───────────────────────────────────────────── */
+  --bg-base:              #FFF8F0;
+  --bg-gradient:          linear-gradient(
+                            135deg,
+                            #FFF8F0 0%,
+                            #FFE8D6 45%,
+                            #F5E6FF 100%
+                          );
+
+  /* ── TEXT — Darker for readability ───────────────────────── */
+  --color-text-dark:      #0D0D1F;
+  --color-text-mid:       #3A3A5C;
+  --color-text-light:     #6A6A8E;
+
+  /* ── GLASSMORPHISM (light variant) ───────────────────────── */
+  --glass-bg:             rgba(255, 255, 255, 0.60);
+  --glass-border:         rgba(255, 255, 255, 0.82);
+  --glass-blur:           blur(20px);
+  --glass-shadow:         0 8px 40px rgba(224, 69, 123, 0.10),
+                          0 2px 12px rgba(0, 0, 0, 0.06);
+
+  /* ── SOFT NEON GLOWS ──────────────────────────────────────── */
+  --glow-saffron:         0 0 40px rgba(255, 153, 51, 0.30);
+  --glow-teal:            0 0 40px rgba(0, 123, 127, 0.25);
+  --glow-pink:            0 0 60px rgba(224, 69, 123, 0.25);
+
+  /* ── TYPOGRAPHY ───────────────────────────────────────────── */
+  --font-display:         'JetBrains Mono', ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Monaco, Consolas, monospace;
+  --font-mono:            'JetBrains Mono', ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Monaco, Consolas, monospace;
+
+  /* ── SPACING & SHAPE ──────────────────────────────────────── */
+  --section-padding:      5rem 6%;
+  --card-radius:          20px;
+  --card-radius-sm:       14px;
+  --pill-radius:          999px;
+
+  /* ── TRANSITIONS ──────────────────────────────────────────── */
+  --transition-fast:      0.18s ease;
+  --transition-base:      0.28s ease;
+}
